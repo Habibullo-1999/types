@@ -23,7 +23,6 @@ type Card struct {
 	ID       int
 	PAN      PAN
 	Balance  Money // Used Money type
-	MinBalance Money
 	Currency Currency
 	Color    string
 	Name     string
