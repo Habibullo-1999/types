@@ -7,6 +7,13 @@ type Money int64
 // Currency представляет код валюты
 type Currency string
 
+// Category представляет собой категорю платежа
+type Category string
+
+// Status представляет собой статус платежа
+type Status string
+
+
 // Коды валют
 const (
 	TJS Currency = "TJS"
@@ -27,4 +34,17 @@ type Card struct {
 	Color    string
 	Name     string
 	Active   bool
+}
+
+const (
+	StatusOK Status = "OK"
+	StatusFail Status = "FAIL"
+	StatusInProgress Status = "INPROGRESS"
+)
+
+type Payment struct {
+	ID 		int
+	Amount Money
+	Category Category
+	Status Status
 }
